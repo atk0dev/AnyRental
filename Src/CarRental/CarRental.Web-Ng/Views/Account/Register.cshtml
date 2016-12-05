@@ -11,9 +11,13 @@
     angular.bootstrap(document.getElementById("registration"),['accountRegister']);
 }
 
-<div data-ng-app="accountRegister" data-ng-controller="AccountRegisterViewModel" id="registration">
-    <br/>
-    @Html.Partial("~/Views/Shared/_ValidationErrors.cshtml")
-    <br/>
-    <div ng-view></div>
+
+<div ng-non-bindable>
+
+    <div data-ng-controller="AccountRegisterViewModel" id="registration">
+        <br/>
+        @Html.Partial("~/Views/Shared/_ValidationErrors.cshtml")
+        <br/>
+        <div ng-view></div>
+    </div>
 </div>

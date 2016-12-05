@@ -44,6 +44,7 @@ namespace CarRental.Web.Controllers
         [Route("logout")]
         public ActionResult Logout()
         {
+            _SecurityAdapter.Initialize();
             WebSecurity.Logout();
             return RedirectToAction("Index", "Home");
         }
