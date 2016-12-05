@@ -15,7 +15,7 @@
 <h2>Make a reservation</h2>
 
 <div ng-non-bindable>
-    <div id="reserveCar" data-ng-controller="ReserveCarViewModel">
+    <div id="reserveCar" data-ng-controller="ReserveCarViewModel as vm">
         @Html.Partial("~/Views/Shared/_ValidationErrors.cshtml")
         <div ng-view></div>
     </div>
