@@ -55,16 +55,31 @@ reserveCarModule.controller("ReserveViewModel", function ($scope, $http, $locati
             viewModelHelper.modelErrors = $scope.reserveCarModel.errors;
     }
 
+    $scope.openedPickup = {
+        opened: false
+    };
+    $scope.openedReturn = {
+        opened: false
+    };
+
+
     $scope.openPickup = function ($event) {
         $event.preventDefault();
         $event.stopPropagation();
-        $scope.openedPickup = true;
+        $scope.openedPickup.opened = true;
     }
+
+    $scope.format = 'dd-MM-yyyy';
+    $scope.dateOptions = {
+        minDate: new Date(),
+        startingDay: 1
+    };
+
 
     $scope.openReturn = function ($event) {
         $event.preventDefault();
         $event.stopPropagation();
-        $scope.openedReturn = true;
+        $scope.openedReturn.opened = true;
     }
 
     setupRules();

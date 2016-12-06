@@ -2,7 +2,8 @@
     <p class="input-group" style="width: 400px;">
         <span class="input-group-addon" style="width: 140px; text-align: left;">Pickup date:</span>
         <input type="text" ng-model="reserveCarModel.PickupDate" class="form-control"
-               datepicker-popup="MM/dd/yyyy" is-open="openedPickup" />
+               datepicker-popup="MM/dd/yyyy" is-open="openedPickup.opened"
+               uib-datepicker-popup="{{format}}" datepicker-options="dateOptions" close-text="Close"/>
         <span class="input-group-btn">
             <button type="button" class="btn btn-default" ng-click="openPickup($event)"><i class="glyphicon glyphicon-calendar"></i></button>
         </span>
@@ -11,7 +12,8 @@
     <p class="input-group" style="width: 400px;">
         <span class="input-group-addon" style="width: 140px; text-align: left;">Return date:</span>
         <input type="text" ng-model="reserveCarModel.ReturnDate" class="form-control"
-               datepicker-popup="MM/dd/yyyy" is-open="openedReturn" />
+               datepicker-popup="MM/dd/yyyy" is-open="openedReturn.opened"
+               uib-datepicker-popup="{{format}}" datepicker-options="dateOptions" close-text="Close"/>
         <span class="input-group-btn">
             <button type="button" class="btn btn-default" ng-click="openReturn($event)"><i class="glyphicon glyphicon-calendar"></i></button>
         </span>
